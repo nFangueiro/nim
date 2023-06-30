@@ -4,19 +4,23 @@ An HTTP Server running the NIM game with a single heap.
 
 There are 3 simple endpoints.
 
-- /start-game \n
+- start-game
+
 Here you can create a game with different input parameters such as "number of matches" and "maximum take".
 
-- /play-turn
+- play-turn
+  
 Here you play your turn removing x number of matches from the pile. The computer then processes your play and if it can, it will play its turn returning the end result.
 
-- /all-games
+- all-games
+
 Just a simple select * from the database to check its state.
+
+-------------
 
 The computer is set to use a winning strategy, so beware!!
 
-
-- Technicalities
+---------------
 
 We use Kotlin with SpringBoot to support this API.
 
