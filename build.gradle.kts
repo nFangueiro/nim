@@ -26,9 +26,6 @@ dependencies {
 	implementation("org.jetbrains.kotlin:kotlin-reflect")
 	runtimeOnly("com.h2database:h2")
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
-	testImplementation("org.junit.jupiter:junit-jupiter-api:5.7.2")
-	testImplementation("org.junit.jupiter:junit-jupiter-engine:5.7.2")
-	testImplementation("org.mockito:mockito-core:3.12.4")
 }
 
 tasks.withType<KotlinCompile> {
