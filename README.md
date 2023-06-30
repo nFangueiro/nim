@@ -1,9 +1,10 @@
-# nim
+# Nim Game!
+
 An HTTP Server running the NIM game with a single heap.
 
 There are 3 simple endpoints.
 
-- /start-game
+- /start-game \n
 Here you can create a game with different input parameters such as "number of matches" and "maximum take".
 
 - /play-turn
