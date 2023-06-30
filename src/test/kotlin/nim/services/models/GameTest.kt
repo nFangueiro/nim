@@ -26,7 +26,6 @@ internal class GameTest {
     private companion object {
         @JvmStatic
         fun plays(): Stream<Arguments> = Stream.of(
-            Arguments.of(-1, -1, 1, "Computer removed 3 matches, matches remaining are 9."),
             Arguments.of(1, null, 1, "This game is already over."),
             Arguments.of(null, 3, 4, "The number of matches to remove \"4\" is not allowed."),
             Arguments.of(null, null, -1, "The number of matches to remove \"-1\" is not allowed."),

@@ -7,13 +7,8 @@ class Game(var numMatches: Int?, var maxTake: Int?) {
     private var defaultMaxTake = 3
 
     init {
-        //Had to do this since I was not able to add annotation validations on Request
-        if(numMatches == null || numMatches!! < 1) {
-            numMatches = defaultNumMatches
-        }
-        if(maxTake == null || maxTake!! <= 0) {
-            maxTake = defaultMaxTake
-        }
+        numMatches = numMatches ?: defaultNumMatches
+        maxTake = maxTake ?: defaultMaxTake
     }
 
     fun playTurn(numMatchesToRemove: Int?): String {
