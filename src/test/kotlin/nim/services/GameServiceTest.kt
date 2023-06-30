@@ -34,7 +34,7 @@ class GameServiceTest {
                 mockData
             )
         // Act
-        val games = gameService.allGames();
+        val games = gameService.allGames()
 
         // Assert
         assertEquals(mockData, games)
@@ -48,10 +48,10 @@ class GameServiceTest {
         Mockito.`when`(gameRepository.save(ArgumentMatchers.any()))
             .thenReturn(null)
 
-        val gameRequest = StartGameRequest(null, null);
+        val gameRequest = StartGameRequest(null, null)
 
         // Act
-        val result = gameService.startGame(gameRequest);
+        val result = gameService.startGame(gameRequest)
 
         // Assert
         assertEquals("Game has started!", result)

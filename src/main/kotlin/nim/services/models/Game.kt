@@ -12,22 +12,22 @@ class Game(var numMatches: Int?, var maxTake: Int?) {
     }
 
     fun playTurn(numMatchesToRemove: Int?): String {
-        var validations = validations(numMatchesToRemove)
+        val validations = validations(numMatchesToRemove)
 
         if (validations.isNotEmpty()) return validations
 
         // player may remove matches
-        numMatches = numMatches!! - numMatchesToRemove!!;
+        numMatches = numMatches!! - numMatchesToRemove!!
 
         // computer turn now.
 
         // Rule: Leave the opponent with one more than the multiple of the maxTake + 1.
 
         // multiple to divide with
-        var multiple = maxTake!! + 1;
+        val multiple = maxTake!! + 1
 
         // we can reach 1 position further since we return + 1 if we find the multiple
-        var reach = maxTake!! + 2;
+        val reach = maxTake!! + 2
 
         // we start in 2 since we return + 1, hence, if we started at 1 we could be removing 0 matches
         for (i in 2 until reach) {
@@ -40,7 +40,7 @@ class Game(var numMatches: Int?, var maxTake: Int?) {
             }
         }
 
-        var random = Random.nextInt(1, maxTake!!)
+        val random = Random.nextInt(1, maxTake!!)
         numMatches = numMatches!! - random
 
         return "Computer removed $random matches, matches remaining are $numMatches."
